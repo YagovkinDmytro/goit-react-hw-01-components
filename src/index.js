@@ -8,3 +8,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>
 );
+
+const root = document.getElementById('root');
+
+const div = document.creareElement('div');
+div.textContant = 'What are you doing man?';
+div.id = '4040';
+
+root.append(div);
