@@ -1,8 +1,8 @@
 const Statistics = ({ title, stats }) => {
   const markupListItem = stats =>
-    stats.map(({ lable, percentage }) => (
-      <li className="item">
-        <span className="label">{lable}</span>
+    stats.map(({ id, label, percentage }) => (
+      <li className="item" key={id}>
+        <span className="label">{label}</span>
         <span className="percentage">{percentage}</span>
       </li>
     ));
