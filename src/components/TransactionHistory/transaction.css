@@ -1,0 +1,28 @@
+.transaction-history {
+  margin-top: 40px;
+  text-transform: capitalize;
+  background-color: rgb(254, 254, 254);
+  border: solid 1px rgba(172, 172, 172, 0.3);
+  box-shadow: 0px 0px 6px 0.1px rgba(0, 0, 0, 0.2);
+  border-collapse: collapse;
+}
+.transaction-head {
+  border: solid 1px rgba(172, 172, 172);
+  width: 250px;
+  padding: 10px 0px;
+  background-color: rgb(230, 239, 248);
+}
+.transaction-block {
+  border: solid 1px rgba(172, 172, 172);
+  width: 250px;
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.transaction-block.light {
+  background-color: rgb(254, 254, 254);
+}
+
+.transaction-block.grey {
+  background-color: rgb(235, 235, 235);
+}

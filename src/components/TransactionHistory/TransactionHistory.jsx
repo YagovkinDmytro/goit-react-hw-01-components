@@ -7,22 +7,24 @@ const TransactionHistory = ({ items }) => {
   //       <td>{currency}</td>
   //     </tr>
   //   ));
-
   return (
     <table className="transaction-history">
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <th className="transaction-head">Type</th>
+          <th className="transaction-head">Amount</th>
+          <th className="transaction-head">Currency</th>
         </tr>
       </thead>
       <tbody>
-        {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
+        {items.map(({ id, type, amount, currency }, idx) => (
+          <tr
+            className={`transaction-block ${idx % 2 ? 'grey' : 'light'}`}
+            key={id}
+          >
+            <td className="transaction-block">{type}</td>
+            <td className="transaction-block">{amount}</td>
+            <td className="transaction-block">{currency}</td>
           </tr>
         ))}
       </tbody>

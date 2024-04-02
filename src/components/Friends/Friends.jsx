@@ -19,7 +19,9 @@ const FriendList = ({ friends }) => {
       </li>
     ));
 
-  return <ul className="friend-list">{friendsListItem(friends)}</ul>;
+  return (
+    <ul className={friendsStyle['friend-list']}>{friendsListItem(friends)}</ul>
+  );
 };
 
 export default FriendList;
