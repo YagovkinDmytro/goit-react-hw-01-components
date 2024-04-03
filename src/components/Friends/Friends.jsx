@@ -1,26 +1,17 @@
-import friendsStyle from './friends.module.css';
+import { FriendsListItem } from './FriendsListItem';
 
 const FriendList = ({ friends }) => {
-  const friendsListItem = friends =>
-    friends.map(({ id, isOnline, avatar, name }) => (
-      <li className={friendsStyle.item} key={id}>
-        <span
-          className={`${friendsStyle.status} ${
-            friendsStyle[`${isOnline ? 'online' : 'offline'}`]
-          }`}
-        ></span>
-        <img
-          className={friendsStyle.avatar}
-          src={avatar}
-          alt="User avatar"
-          width="48"
-        />
-        <p className={friendsStyle.name}>{name}</p>
-      </li>
-    ));
-
   return (
-    <ul className={friendsStyle['friend-list']}>{friendsListItem(friends)}</ul>
+    <ul className="friend-list">
+      {friends.map(({ id, isOnline, avatar, name }) => (
+        <FriendsListItem
+          key={id}
+          isOnline={isOnline}
+          avatar={avatar}
+          name={name}
+        />
+      ))}
+    </ul>
   );
 };
 
